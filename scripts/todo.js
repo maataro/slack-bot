@@ -37,7 +37,7 @@ module.exports = (robot) => {
   });
   robot.respond(/donelist/i, (msg) => {
     const list = todo.donelist();
-    if (donelist.length === 0) {
+    if (list.length === 0) {
       msg.send('(完了したTODOはありません)');
     } else {
       msg.send(todo.donelist().join('\n'));
